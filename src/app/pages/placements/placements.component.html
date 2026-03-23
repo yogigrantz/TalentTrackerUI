@@ -1,0 +1,29 @@
+<div class="container mt-4">
+
+  <h2 class="mb-4">Placements</h2>
+
+  <table class="table table-striped table-hover table-bordered align-middle company-table">
+
+    <thead class="table-dark">
+      <tr>
+        <th>Company</th>
+        <th>Job Title</th>
+        <th>Candidate Names</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let c of placements">
+        <td>{{ c.companyName }}</td>
+        <td>{{ c.jobTitle }}</td>
+        <td>{{ c.candidateNames }}</td>
+      </tr>
+    </tbody>
+
+  </table>
+
+  <button routerLink="/placement/add" class="add-btn">
+    + Add Placement
+  </button>
+
+</div>

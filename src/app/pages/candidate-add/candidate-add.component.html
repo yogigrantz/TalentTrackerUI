@@ -1,0 +1,84 @@
+<div class="container mt-4">
+
+  <h2 class="mb-4">Add Candidate</h2>
+
+  <form (ngSubmit)="saveCandidate()" #candidateForm="ngForm">
+
+    <div class="row g-3">
+
+      <div class="col-md-6">
+        <label class="form-label">Name</label>
+        <input class="form-control"
+               [(ngModel)]="candidate.name"
+               name="name"
+               required>
+      </div>
+
+      <div class="col-md-6">
+        <label class="form-label">Email</label>
+        <input class="form-control"
+               type="email"
+               [(ngModel)]="candidate.email"
+               name="email"
+               required>
+      </div>
+
+      <div class="col-md-6">
+        <label class="form-label">Phone</label>
+        <input class="form-control"
+               [(ngModel)]="candidate.phone"
+               name="phone"
+               required>
+      </div>
+
+      <div class="col-md-4">
+        <label class="form-label">City</label>
+        <input class="form-control"
+               [(ngModel)]="candidate.city"
+               name="city"
+               required>
+      </div>
+
+      <div class="col-md-2">
+        <label class="form-label">State</label>
+        <input class="form-control"
+               [(ngModel)]="candidate.state"
+               name="state"
+               required>
+      </div>
+
+      <div class="col-md-2">
+        <label class="form-label">Zip</label>
+        <input class="form-control"
+               [(ngModel)]="candidate.zip"
+               name="zip"
+               required>
+      </div>
+
+      <div class="col-md-6">
+        <label class="form-label">Profession</label>
+        <input class="form-control"
+               [(ngModel)]="candidate.profession"
+               name="profession"
+               required>
+      </div>
+
+    </div>
+
+    <div class="mt-4">
+
+      <button type="submit" class="btn btn-primary me-2">
+        Save Candidate
+      </button>
+
+      <button type="button"
+              class="btn btn-secondary"
+              routerLink="/candidates">
+        Cancel
+      </button>
+
+    </div>
+
+  </form>
+
+</div>

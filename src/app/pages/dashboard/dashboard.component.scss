@@ -1,0 +1,83 @@
+.dashboard {
+  padding: 20px;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+}
+
+.stat-card {
+  background: white;
+  border-radius: 10px;
+  padding: 25px 10px;
+  text-align: center;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+
+.stat-card h3 {
+  margin-top: 15px;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.donut {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  position: relative;
+  font-weight: 700;
+  font-size: 20px;
+  color: #2c3e50;
+  z-index: 0;
+}
+
+.donut::before {
+  content: "";
+  position: absolute;
+  width: 65px;
+  height: 65px;
+  background: white;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.donut span {
+  position: relative;
+  z-index: 2;
+}
+
+.donut-candidates {
+  background: conic-gradient(#3498db 0 260deg, #ecf0f1 260deg);
+}
+
+.donut-clients {
+  background: conic-gradient(#2ecc71 0 210deg, #ecf0f1 210deg);
+}
+
+.donut-companies {
+  background: conic-gradient(#9b59b6 0 190deg, #ecf0f1 190deg);
+}
+
+.donut-jobs {
+  background: conic-gradient(#f39c12 0 300deg, #ecf0f1 300deg);
+}
+
+.donut-placements {
+  background: conic-gradient(#e74c3c 0 150deg, #ecf0f1 150deg);
+}
+
+.stat-card {
+  cursor: pointer;
+}
