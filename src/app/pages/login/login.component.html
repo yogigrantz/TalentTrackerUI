@@ -1,0 +1,36 @@
+<div class="login-wrapper">
+  <div class="login-card">
+    <h2>TalenTrac</h2>
+    <p class="subtitle">Sign in to continue</p>
+
+    <form (ngSubmit)="login()">
+
+      <div class="form-group">
+        <input
+          type="text"
+          placeholder="Username"
+          [(ngModel)]="username"
+          name="username"
+          required />
+      </div>
+
+      <div class="form-group">
+        <input
+          type="password"
+          placeholder="Password"
+          [(ngModel)]="password"
+          name="password"
+          required />
+      </div>
+
+      <button type="submit" [disabled]="loading">
+        {{ loading ? 'Signing in...' : 'Login' }}
+      </button>
+
+      <div class="error" *ngIf="errorMessage">
+        {{ errorMessage }}
+      </div>
+
+    </form>
+  </div>
+</div>

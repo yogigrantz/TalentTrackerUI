@@ -1,0 +1,61 @@
+<div class="container mt-4">
+
+  <h2 class="mb-4">Add Job</h2>
+
+  <form (ngSubmit)="saveJob()" #candidateForm="ngForm">
+
+    <div class="row g-3">
+
+      <div class="col-md-6">
+        <label class="form-label">Company Name</label>
+        <input class="form-control"
+               [(ngModel)]="job.companyName"
+               name="companyName"
+               required>
+      </div>
+
+      <div class="col-md-6">
+        <label class="form-label">Job Title</label>
+        <input class="form-control"
+               type="email"
+               [(ngModel)]="job.jobTitle"
+               name="jobTitle"
+               required>
+      </div>
+
+      <div class="col-md-6">
+        <label class="form-label">Salary</label>
+        <input class="form-control"
+               [(ngModel)]="job.salary"
+               name="salary"
+               required>
+      </div>
+
+      <div class="col-md-4">
+        <label class="form-label">Hourly Rate</label>
+        <input class="form-control"
+               [(ngModel)]="job.hourlyRate"
+               name="hourlyRate"
+               required>
+      </div>
+
+    </div>
+
+    <div class="mt-4">
+
+      <button type="submit" class="btn btn-primary me-2">
+        Save Job
+      </button>
+
+      <button type="button"
+              class="btn btn-secondary"
+              routerLink="/jobs">
+        Cancel
+      </button>
+
+    </div>
+
+  </form>
+
+</div>
+
