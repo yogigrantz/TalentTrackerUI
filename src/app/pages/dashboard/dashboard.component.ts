@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-dashboard',
@@ -24,7 +25,7 @@ loadDashboard() {
         return;
       }
 
-      this.http.get('https://talenttrack.azurewebsites.net/api/v1/Dashboard', {
+      this.http.get(environment.apiBaseUrl + '/api/v1/Dashboard', {
         headers: {
           Authorization: `Bearer ${token}`
         }

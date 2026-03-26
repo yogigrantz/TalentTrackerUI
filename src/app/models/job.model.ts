@@ -1,7 +1,8 @@
 export interface JobDto {
     id: number,
-    companyName: string,
+    company: string,
     jobTitle: string,
+    postedDate: string,
     salary: number,
-    hourlyRate: number
+    hourly: number
 }
