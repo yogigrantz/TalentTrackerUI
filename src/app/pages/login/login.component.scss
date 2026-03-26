@@ -25,49 +25,4 @@
     color: #666;
     font-size: 14px;
   }
-
-  .form-group {
-    margin-bottom: 18px;
-
-    input {
-      width: 100%;
-      padding: 12px;
-      border-radius: 8px;
-      border: 1px solid #ccc;
-      font-size: 14px;
-      transition: 0.2s;
-
-      &:focus {
-        border-color: #2c5364;
-        outline: none;
-        box-shadow: 0 0 5px rgba(44,83,100,0.4);
-      }
-    }
-  }
-
-  button {
-    width: 100%;
-    padding: 12px;
-    border-radius: 8px;
-    border: none;
-    background: #2c5364;
-    color: white;
-    font-weight: 600;
-    cursor: pointer;
-    transition: 0.3s;
-
-    &:hover {
-      background: #1f3b4a;
-    }
-
-    &:disabled {
-      background: #999;
-    }
-  }
-
-  .error {
-    margin-top: 15px;
-    color: red;
-    font-size: 13px;
-  }
 }

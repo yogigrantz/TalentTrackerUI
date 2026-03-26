@@ -1,0 +1,53 @@
+<div class="registration-wrapper">
+  <div class="auth-card">
+    <h2>TalentTrack</h2>
+    <p class="subtitle">Create your account</p>
+
+    <form (ngSubmit)="register()">
+
+      <div class="form-group">
+        <input
+          type="text"
+          placeholder="Username"
+          [(ngModel)]="model.userName"
+          name="userName"
+          required />
+      </div>
+
+      <div class="form-group">
+        <input
+          type="email"
+          placeholder="Email"
+          [(ngModel)]="model.email"
+          name="email" />
+      </div>
+
+      <div class="form-group">
+        <input
+          type="password"
+          placeholder="Password"
+          [(ngModel)]="model.password"
+          name="password"
+          required />
+      </div>
+
+      <button type="submit"
+              [disabled]="!model.userName || !model.password">
+        Register
+      </button>
+
+      <div class="success" *ngIf="successMessage">
+        {{ successMessage }}
+      </div>
+
+      <div class="error" *ngIf="errorMessage">
+        {{ errorMessage }}
+      </div>
+
+      <div class="link">
+        <a routerLink="/login">Already have an account? Login</a>
+      </div>
+
+    </form>
+  </div>
+</div>

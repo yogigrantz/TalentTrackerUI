@@ -11,6 +11,8 @@ import { ClientsComponent } from './pages/clients/clients.component';
 import { CandidateAddComponent } from './pages/candidate-add/candidate-add.component';  
 import { VersionComponent } from './pages/version/version.component'; 
 import { JobAddComponent } from './pages/job-add/job-add.component';
+import { RegistrationComponent } from './pages/registration/registration.component';
+import { UsersComponent } from './pages/users/users.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -24,6 +26,8 @@ const routes: Routes = [
   { path: 'candidate/add', component: CandidateAddComponent},
   { path: 'version', component: VersionComponent},
   { path: 'job/add', component: JobAddComponent},
+  { path: 'registration', component: RegistrationComponent},
+  { path: 'users', component: UsersComponent},
   { path: '', redirectTo: '/login', pathMatch: 'full' }
 ];
 

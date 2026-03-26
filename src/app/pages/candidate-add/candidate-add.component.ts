@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { CandidateDto } from 'src/app/models/candidate.model';
+import { environment } from 'src/environments/environment';
 
 
 @Component({
@@ -26,8 +27,7 @@ saveCandidate(){
 
 const token = localStorage.getItem('tt_token');
 
-      this.http.post(
-        'https://talenttrack.azurewebsites.net/api/v1/Candidate',
+      this.http.post(environment.apiBaseUrl + '/api/v1/Candidate',
         this.candidate,
         {
           responseType: 'text',

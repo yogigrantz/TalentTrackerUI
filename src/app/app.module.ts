@@ -19,6 +19,8 @@ import { ClientsComponent } from './pages/clients/clients.component';
 import { CandidateAddComponent } from './pages/candidate-add/candidate-add.component';
 import { VersionComponent } from './pages/version/version.component';
 import { JobAddComponent } from './pages/job-add/job-add.component';
+import { RegistrationComponent } from './pages/registration/registration.component';
+import { UsersComponent } from './pages/users/users.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +35,9 @@ import { JobAddComponent } from './pages/job-add/job-add.component';
     ClientsComponent,
     CandidateAddComponent,
     VersionComponent,
-    JobAddComponent
+    JobAddComponent,
+    RegistrationComponent,
+    UsersComponent
   ],
   imports: [
     BrowserModule,

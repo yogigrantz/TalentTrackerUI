@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-candidates',
@@ -23,7 +24,7 @@ export class CandidatesComponent implements OnInit {
     return;
   }
 
-  this.http.get<any[]>('https://talenttrack.azurewebsites.net/api/v1/Candidate',
+  this.http.get<any[]>(environment.apiBaseUrl + '/api/v1/Candidate',
    {
         headers: {
           Authorization: `Bearer ${token}`
