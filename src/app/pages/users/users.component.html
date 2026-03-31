@@ -1,1 +1,21 @@
-<p>users works!</p>
+
+
+  <table class="table table-striped table-hover table-bordered align-middle">
+
+    <thead class="table-dark">
+      <tr>
+        <th>UserName</th>
+        <th>Email</th>
+        <th>Password</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let c of users">
+        <td>{{ c.userName }}</td>
+        <td>{{ c.email }}</td>
+        <td>{{ c.password }}</td>
+      </tr>
+    </tbody>
+
+  </table>
